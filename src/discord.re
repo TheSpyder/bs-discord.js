@@ -1,11 +1,13 @@
 module Channel = {
   type t;
   [@bs.get] external channelType: t => string = "type";
+  [@bs.get] external name: t => string = "name";
 };
 
 module User = {
   type t;
   [@bs.get] external bot: t => bool = "bot";
+  [@bs.get] external name: t => string = "username";
 };
 
 module Message = {
