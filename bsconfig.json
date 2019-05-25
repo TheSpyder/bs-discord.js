@@ -1,5 +1,8 @@
 {
   "name": "bs-discord.js",
   "sources": ["src"],
+  "package-specs": {
+    "module": "commonjs",
+  },
   "refmt": 3
 }

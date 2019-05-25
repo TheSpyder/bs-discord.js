@@ -2,7 +2,7 @@ open Discord;
 
 let client = Client.createClient();
 
-Client.onReady(client, (_) => Js.log("Bot is ready"));
+Client.onReady(client, _ => Js.log("Bot is ready"));
 
 let handleMessage = msg =>
   switch (Message.author(msg) |> User.bot) {
