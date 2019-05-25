@@ -1,5 +1,5 @@
 {
-  "name": "bs-discord",
+  "name": "bs-discord.js",
   "sources": ["src"],
   "refmt": 3
 }
