@@ -1,7 +1,18 @@
+
+module RichEmbed = {
+  type t;
+  [@bs.module "discord.js"] [@bs.new] external create: unit => t = "RichEmbed";
+  [@bs.send] external title: t => string => t = "setTitle";
+  [@bs.send] external color: t => string => t = "setColor";
+  [@bs.send] external description: t => string => t = "setDescription";
+};
+
 module Channel = {
   type t;
   [@bs.get] external channelType: t => string = "type";
   [@bs.get] external name: t => string = "name";
+  [@bs.send] external sendEmbed: t => RichEmbed.t => unit = "send";
+  [@bs.send] external send: t => string => unit = "send";
 };
 
 module User = {
@@ -16,6 +27,7 @@ module Message = {
   [@bs.get] external channel: t => Channel.t = "";
   [@bs.send] external reply: (t, string) => unit = "";
   [@bs.get] external author: t => User.t = "";
+  [@bs.send] external delete: t => unit = "";
 };
 
 module ClientUser = {
